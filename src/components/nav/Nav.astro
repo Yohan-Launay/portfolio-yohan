@@ -1,0 +1,20 @@
+---
+interface Props {
+    href: string;
+    }
+
+const { href } = Astro.props;
+
+import Nav from './Nav.module.scss';
+---
+
+<nav class={Nav}>
+    <ul>
+        <li>
+            <a href={href}>Home</a>
+            <a href={href}>Compétences</a>
+            <a href={href}>Projects</a>
+            <a href={href}>Contact</a>
+        </li>
+    </ul>
+</nav>
