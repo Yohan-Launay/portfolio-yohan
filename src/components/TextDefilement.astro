@@ -1,0 +1,42 @@
+---
+interface Props {
+    text: string;
+}
+
+const { text } = Astro.props;
+
+---
+
+<div>
+    <p>{text}</p>
+    <p>{text}</p>
+    <p>{text}</p>
+    <p>{text}</p>
+    <p>{text}</p>
+</div>
+
+<style>
+    div {
+        background: var(--text-beige);
+        height: 81px;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+    }
+    p {
+        font-size: 30px;
+        font-weight: 800;
+        padding: 0 50px;
+        white-space: nowrap;
+        animation: scrollText 5s linear infinite;
+    }
+
+    @keyframes scrollText {
+        0% {
+            transform: translate(0);
+        }
+        100% {
+            transform: translate(-100%);
+        }
+    }
+</style>

@@ -1,0 +1,92 @@
+---
+import { Image } from 'astro:assets';
+import imgProfile from "../../assets/img/profile.png";
+import imgGithub from "../../assets/img/img-github.png";
+import imgLinkedIn from "../../assets/img/img-linkedin.png";
+
+
+
+interface Props {
+    firstTitle: string;
+    secondTitle: string;
+    resume: string;
+    hrefGithub: string;
+    hrefLinkedIn: string;
+}
+
+const {
+    firstTitle,
+    secondTitle,
+    resume,
+    hrefGithub,
+    hrefLinkedIn
+} = Astro.props;
+
+---
+<section id="home">
+    <div class="left">
+        <h2>{firstTitle}</h2>
+        <h1>{secondTitle}</h1>
+        <p>{resume}</p>
+        <div class="link-home">
+            <a href={hrefGithub}>
+                <Image src={imgGithub} alt="Image profile Yohan LAUNAY" />
+                Github
+            </a>
+            <a href={hrefLinkedIn}>
+                <Image src={imgLinkedIn} alt="Image profile Yohan LAUNAY" />
+                LinkedIn
+            </a>
+        </div>
+    </div>
+    <div class="right">
+        <Image src={imgProfile} alt="Image profile Yohan LAUNAY" />
+    </div>
+</section>
+
+<style>
+    #home {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100vh;
+    }
+    .left {
+        width: 55%;
+    }
+    h2 {
+        font-size: 25px;
+        padding: 0;
+        margin: 10px 0;
+    }
+    h1 {
+        font-size: 55px;
+        padding: 0;
+        margin: 0;
+    }
+    p {
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        margin: 15px 0;
+    }
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 10px;
+        background: var(--blue-pale);
+        padding: 10px 20px;
+        margin-right: 10px;
+    }
+    a img {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+    }
+
+    .link-home {
+        display: flex;
+    }
+</style>
