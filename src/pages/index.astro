@@ -3,6 +3,9 @@ import Layout from '../layouts/Layout.astro';
 import Nav from '../components/nav/Nav.astro';
 import SectionHome from '../components/home/Home.astro'
 import TextDefilement from '../components/TextDefilement.astro'
+import Skills from '../components/home/Skills.astro'
+import Card from '../components/Card.astro'
+
 
 ---
 <Layout title="Yohan Launay">
@@ -17,9 +20,19 @@ import TextDefilement from '../components/TextDefilement.astro'
 			hrefLinkedIn="#">
 		</SectionHome>
 		<TextDefilement text="DÉVELOPPEUR WEB"></TextDefilement>
+		<section id="skills-project">
+			<Skills></Skills>
+			<Card></Card>
+			<Card></Card>
+			<Card></Card>
+		</section>
 	</main>
 </Layout>
 
 <style>
-
+	#skills-project {
+		margin: 100px 200px;
+		display: flex;
+		width: 100%;
+	}
 </style>

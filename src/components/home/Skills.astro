@@ -1,0 +1,128 @@
+---
+import { Image } from 'astro:assets';
+import figmaLogo from "../../assets/img/logo-skills/figma-logo.png";
+import bootstrapLogo from "../../assets/img/logo-skills/bootstrap-logo.png";
+import tailwindLogo from "../../assets/img/logo-skills/tailwind-logo.png";
+import sassLogo from "../../assets/img/logo-skills/sass-logo.png";
+import reactLogo from "../../assets/img/logo-skills/react-logo.png";
+import wordpressLogo from "../../assets/img/logo-skills/wordpress-logo.png";
+import parcelJSLogo from "../../assets/img/logo-skills/parceljs-logo.png";
+import gitLogo from "../../assets/img/logo-skills/git-logo.png";
+import notionLogo from "../../assets/img/logo-skills/notion-logo.png";
+import jiraLogo from "../../assets/img/logo-skills/jira-logo.png";
+import javaLogo from "../../assets/img/logo-skills/java-logo.png";
+import symfonyLogo from "../../assets/img/logo-skills/symfony-logo.png";
+import nodeJSLogo from "../../assets/img/logo-skills/nodejs-logo.png";
+import mariaDBLogo from "../../assets/img/logo-skills/mariadb-logo.png";
+import postgresqlLogo from "../../assets/img/logo-skills/postgresql-logo.png";
+
+
+---
+<div id="skills">
+    <h2>Compétences</h2>
+    <div class="skills">
+        <div>
+            <h3>Design</h3>
+            <div>
+                <Image src={figmaLogo} alt="Figma" />
+                <p>Figma</p>
+            </div>
+            <div>
+                <Image src={bootstrapLogo} alt="Bootstrap" />
+                <p>Bootstrap</p>
+            </div>
+            <div>
+                <Image src={tailwindLogo} alt="Tailwind"/>
+                <p>Tailwind</p>
+            </div>
+        </div>
+        <div>
+            <h3>Front-end</h3>
+            <div>
+                <Image src={sassLogo} alt="Sass"/>
+                <p>Sass</p>
+            </div>
+            <div>
+                <Image src={reactLogo} alt="React"/>
+                <p>React</p>
+            </div>
+            <div>
+                <Image src={wordpressLogo} alt="Wordpress"/>
+                <p>Wordpress</p>
+            </div>
+            <div>
+                <Image src={parcelJSLogo} alt="ParcelJS"/>
+                <p>ParcelJS</p>
+            </div>
+        </div>
+        <div>
+            <h3>Autres</h3>
+            <div>
+                <Image src={gitLogo} alt="Git"/>
+                <p>Git</p>
+            </div>
+            <div>
+                <Image src={notionLogo} alt="Notion"/>
+                <p>Notion</p>
+            </div>
+            <div>
+                <Image src={jiraLogo} alt="Jira"/>
+                <p>Jira</p>
+            </div>
+        </div>
+        <div>
+            <h3>Back-end</h3>
+            <div>
+                <Image src={javaLogo} alt="Java"/>
+                <p>Java</p>
+            </div>
+            <div>
+                <Image src={symfonyLogo} alt="Symfony"/>
+                <p>Symfony</p>
+            </div>
+            <div>
+                <Image src={nodeJSLogo} alt="NodeJS"/>
+                <p>NodeJS</p>
+            </div>
+            <div>
+                <Image src={mariaDBLogo} alt="MariaDB"/>
+                <p>MariaDB</p>
+            </div>
+            <div>
+                <Image src={postgresqlLogo} alt=""/>
+                <p>Postgresql</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    #skills {
+        width: 20%;
+    }
+    h2 {
+        text-align: center;
+    }
+    h3 {
+        padding-bottom: 5px;
+    }
+    .skills {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .skills > div {
+        width: 50%;
+        padding: 10px;
+    }
+    .skills > div > div {
+        display: flex;
+        padding: 5px;
+
+
+    }
+    img {
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+    }
+</style>
