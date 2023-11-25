@@ -15,7 +15,8 @@ import symfonyLogo from "../../assets/img/logo-skills/symfony-logo.png";
 import nodeJSLogo from "../../assets/img/logo-skills/nodejs-logo.png";
 import mariaDBLogo from "../../assets/img/logo-skills/mariadb-logo.png";
 import postgresqlLogo from "../../assets/img/logo-skills/postgresql-logo.png";
-
+import mongoDBLogo from "../../assets/img/logo-skills/mongodb-logo.png";
+import dockerLogo from "../../assets/img/logo-skills/docker-logo.png";
 
 ---
 <div id="skills">
@@ -69,6 +70,10 @@ import postgresqlLogo from "../../assets/img/logo-skills/postgresql-logo.png";
                 <Image src={jiraLogo} alt="Jira"/>
                 <p>Jira</p>
             </div>
+            <div>
+                <Image src={dockerLogo} alt="Jira"/>
+                <p>Docker</p>
+            </div>
         </div>
         <div>
             <h3>Back-end</h3>
@@ -92,16 +97,25 @@ import postgresqlLogo from "../../assets/img/logo-skills/postgresql-logo.png";
                 <Image src={postgresqlLogo} alt=""/>
                 <p>Postgresql</p>
             </div>
+            <div>
+                <Image src={mongoDBLogo} alt=""/>
+                <p>MongoDB</p>
+            </div>
         </div>
     </div>
 </div>
 
 <style>
     #skills {
-        width: 20%;
+        width: 100%;
+        position: sticky;
+        top: 100px;
+        left: 0;
     }
     h2 {
+        font-size: 30px;
         text-align: center;
+        padding: 20px 0;
     }
     h3 {
         padding-bottom: 5px;

@@ -1,24 +1,69 @@
 ---
+import { Image } from 'astro:assets';
+
 interface Props {
 	title: string;
 	body: string;
 	href: string;
+	pastille: string;
+	status: string;
+	name: string;
+	logo: string;
+	alt: string;
 }
 
-const { href, title, body } = Astro.props;
+const {
+	href,
+	title,
+	body,
+	pastille,
+	status,
+	alt,
+	logo
+} = Astro.props;
+
 ---
 
 <li class="link-card">
 	<a href={href}>
 		<h2>
 			{title}
-			<span>&rarr;</span>
+
 		</h2>
-		<p>
+		<p class="body">
 			{body}
 		</p>
+		<div>
+			<Image src={pastille} alt={alt}/>
+			<p class="text-status">{status}</p>
+		</div>
 	</a>
 </li>
 <style>
-	
+	img {
+		width: 17px;
+		height: 17px;
+	}
+	.text-status {
+		padding-left: 5px;
+		font-size: 14px;
+	}
+	div {
+		display: flex;
+		align-items: center;
+		padding: 10px 0;
+	}
+	.body {
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+	}
+	h2 {
+		font-size: 20px;
+		font-style: normal;
+		font-weight: 600;
+		line-height: normal;
+		padding-bottom: 15px;
+	}
 </style>

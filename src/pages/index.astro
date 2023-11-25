@@ -5,7 +5,26 @@ import SectionHome from '../components/home/Home.astro'
 import TextDefilement from '../components/TextDefilement.astro'
 import Skills from '../components/home/Skills.astro'
 import Card from '../components/Card.astro'
+import Category from '../components/Category.astro'
+import bootstrapLogo from "../../assets/img/logo-skills/bootstrap-logo.png";
+import tailwindLogo from "../../assets/img/logo-skills/tailwind-logo.png";
+import sassLogo from "../assets/img/logo-skills/sass-logo.png";
+import reactLogo from "../assets/img/logo-skills/react-logo.png";
+import wordpressLogo from "../../assets/img/logo-skills/wordpress-logo.png";
+import parcelJSLogo from "../../assets/img/logo-skills/parceljs-logo.png";
+import gitLogo from "../../assets/img/logo-skills/git-logo.png";
+import notionLogo from "../../assets/img/logo-skills/notion-logo.png";
+import jiraLogo from "../../assets/img/logo-skills/jira-logo.png";
+import javaLogo from "../assets/img/logo-skills/java-logo.png";
+import symfonyLogo from "../assets/img/logo-skills/symfony-logo.png";
+import nodeJSLogo from "../../assets/img/logo-skills/nodejs-logo.png";
+import mariaDBLogo from "../assets/img/logo-skills/mariadb-logo.png";
+import mongoDBLogo from "../assets/img/logo-skills/mongodb-logo.png";
+import dockerLogo from "../assets/img/logo-skills/docker-logo.png";
+import statusInProgress from "../assets/img/status-in-progress.png";
+import statusFinish from "../assets/img/status-finish.png";
 
+import javascriptLogo from "../assets/img/logo-skills/javascript-logo.png";
 
 ---
 <Layout title="Yohan Launay">
@@ -21,18 +40,156 @@ import Card from '../components/Card.astro'
 		</SectionHome>
 		<TextDefilement text="DÉVELOPPEUR WEB"></TextDefilement>
 		<section id="skills-project">
-			<Skills></Skills>
-			<Card></Card>
-			<Card></Card>
-			<Card></Card>
+			<div class="skills-div">
+				<Skills></Skills>
+			</div>
+			<ul>
+				<h2>Projects</h2>
+				<div class="project">
+					<div class="card">
+						<Card
+							href="#"
+							title="Projet enchères"
+							body="Lorem ipsum dolor sit amet consectetur. Vitae nunc eu nunc eget consequat congue. Laoreet tellus proin vitae laoreet. Ultrices sit in at at. Mattis pulvinar faucibus ultrices nunc metus interdum."
+							pastille={statusFinish}
+							alt="Status in progress"
+							status="Terminer"
+						/>
+						<div class="all-category">
+							<Category src={javaLogo} alt="alt" text="Java"></Category>
+						</div>
+					</div>
+					<div class="card">
+						<Card
+							href="#"
+							title="Cocktails recipes"
+							body="Lorem ipsum dolor sit amet consectetur. Vitae nunc eu nunc eget consequat congue. Laoreet tellus proin vitae laoreet. Ultrices sit in at at. Mattis pulvinar faucibus ultrices nunc metus interdum."
+							pastille={statusInProgress}
+							alt="Status in progress"
+							status="En cours"
+						/>
+						<div class="all-category">
+							<Category src={symfonyLogo} alt="alt" text="Symfony"></Category>
+							<Category src={mariaDBLogo} alt="alt" text="MariaDB"></Category>
+							<Category src={dockerLogo} alt="alt" text="Docker"></Category>
+						</div>
+					</div>
+					<div class="card">
+						<Card
+							href="#"
+							title="Cyborg"
+							body="Lorem ipsum dolor sit amet consectetur. Vitae nunc eu nunc eget consequat congue. Laoreet tellus proin vitae laoreet. Ultrices sit in at at. Mattis pulvinar faucibus ultrices nunc metus interdum."
+							pastille={statusFinish}
+							alt="Status in progress"
+							status="Terminer"
+						/>
+					</div>
+					<div class="card">
+						<Card
+							href="#"
+							title="Weather"
+							body="Lorem ipsum dolor sit amet consectetur. Vitae nunc eu nunc eget consequat congue. Laoreet tellus proin vitae laoreet. Ultrices sit in at at. Mattis pulvinar faucibus ultrices nunc metus interdum."
+							pastille={statusFinish}
+							alt="Status in progress"
+							status="Terminer"
+						/>
+						<div class="all-category">
+							<Category src={reactLogo} alt="alt" text="React"></Category>
+							<Category src={mongoDBLogo} alt="alt" text="MongoDB"></Category>
+							<Category src={sassLogo} alt="alt" text="Sass"></Category>
+						</div>
+					</div>
+					<div class="card">
+						<Card
+							href="#"
+							title="Todolist"
+							body="Lorem ipsum dolor sit amet consectetur. Vitae nunc eu nunc eget consequat congue. Laoreet tellus proin vitae laoreet. Ultrices sit in at at. Mattis pulvinar faucibus ultrices nunc metus interdum."
+							pastille={statusFinish}
+							alt="Status in progress"
+							status="Terminer"
+						/>
+						<div class="all-category">
+							<Category src={reactLogo} alt="alt" text="React"></Category>
+							<Category src={mongoDBLogo} alt="alt" text="MongoDB"></Category>
+							<Category src={sassLogo} alt="alt" text="Sass"></Category>
+						</div>
+					</div>
+					<div class="card">
+						<Card
+							href="#"
+							title="Morpion"
+							body="Lorem ipsum dolor sit amet consectetur. Vitae nunc eu nunc eget consequat congue. Laoreet tellus proin vitae laoreet. Ultrices sit in at at. Mattis pulvinar faucibus ultrices nunc metus interdum."
+							pastille={statusFinish}
+							alt="Status in progress"
+							status="Terminer"
+						/>
+						<div class="all-category">
+							<Category src={javascriptLogo} alt="alt" text="Javascript"></Category>
+						</div>
+					</div>
+					<div class="card">
+						<Card
+							href="#"
+							title="Guess the number"
+							body="Lorem ipsum dolor sit amet consectetur. Vitae nunc eu nunc eget consequat congue. Laoreet tellus proin vitae laoreet. Ultrices sit in at at. Mattis pulvinar faucibus ultrices nunc metus interdum."
+							pastille={statusFinish}
+							alt="Status in progress"
+							status="Terminer"
+						/>
+						<div class="all-category">
+							<Category src={javascriptLogo} alt="alt" text="Javascript"></Category>
+						</div>
+					</div>
+					<div class="card">
+						<Card
+							href="#"
+							title="Rock papier Scissors"
+							body="Lorem ipsum dolor sit amet consectetur. Vitae nunc eu nunc eget consequat congue. Laoreet tellus proin vitae laoreet. Ultrices sit in at at. Mattis pulvinar faucibus ultrices nunc metus interdum."
+							pastille={statusFinish}
+							alt="Status in progress"
+							status="Terminer"
+						/>
+						<div class="all-category">
+							<Category src={javascriptLogo} alt="alt" text="Javascript"></Category>
+						</div>
+					</div>
+				</ul>
 		</section>
 	</main>
 </Layout>
 
 <style>
 	#skills-project {
-		margin: 100px 200px;
+		margin-top: 100px;
 		display: flex;
+	}
+	.skills-div {
+		width: 90vw;
+	}
+	h2 {
+		font-size: 30px;
+		text-align: center;
+		padding: 20px 0;
+	}
+	.card {
+		border-radius: 16px;
+		border: 1px solid var(--text-beige);
+		background: var(--blue-pale);
+		width: 330px;
+		margin: 10px;
+		padding: 10px 20px;
+	}
+	.project {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		align-items: center;
 		width: 100%;
 	}
+
+	.all-category {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
 </style>

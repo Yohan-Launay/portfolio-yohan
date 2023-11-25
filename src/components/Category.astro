@@ -1,0 +1,39 @@
+---
+
+import { Image } from 'astro:assets';
+
+interface Props {
+    src: string;
+    alt: string;
+    text: string;
+}
+
+const {
+    src,
+    alt,
+    text,
+} = Astro.props;
+---
+
+<div>
+    <Image src={src} alt={alt} />
+    <p>{text}</p>
+</div>
+<style>
+    div {
+        display: flex;
+        align-items: center;
+        border-radius: 14px;
+        background: var(--blue-duck);
+        padding: 3px 10px;
+        margin: 5px 5px 0 0;
+    }
+    div > img {
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+    }
+    div > p {
+        font-size: 14px;
+    }
+</style>
