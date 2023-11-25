@@ -5,45 +5,47 @@ import SectionHome from '../components/home/Home.astro'
 import TextDefilement from '../components/TextDefilement.astro'
 import Skills from '../components/home/Skills.astro'
 import Card from '../components/Card.astro'
+import Contact from '../components/home/Contact.astro'
 import Category from '../components/Category.astro'
-import bootstrapLogo from "../../assets/img/logo-skills/bootstrap-logo.png";
-import tailwindLogo from "../../assets/img/logo-skills/tailwind-logo.png";
+import Footer from '../components/Footer.astro'
 import sassLogo from "../assets/img/logo-skills/sass-logo.png";
 import reactLogo from "../assets/img/logo-skills/react-logo.png";
-import wordpressLogo from "../../assets/img/logo-skills/wordpress-logo.png";
-import parcelJSLogo from "../../assets/img/logo-skills/parceljs-logo.png";
-import gitLogo from "../../assets/img/logo-skills/git-logo.png";
-import notionLogo from "../../assets/img/logo-skills/notion-logo.png";
-import jiraLogo from "../../assets/img/logo-skills/jira-logo.png";
 import javaLogo from "../assets/img/logo-skills/java-logo.png";
 import symfonyLogo from "../assets/img/logo-skills/symfony-logo.png";
-import nodeJSLogo from "../../assets/img/logo-skills/nodejs-logo.png";
 import mariaDBLogo from "../assets/img/logo-skills/mariadb-logo.png";
 import mongoDBLogo from "../assets/img/logo-skills/mongodb-logo.png";
 import dockerLogo from "../assets/img/logo-skills/docker-logo.png";
 import statusInProgress from "../assets/img/status-in-progress.png";
 import statusFinish from "../assets/img/status-finish.png";
 
+
 import javascriptLogo from "../assets/img/logo-skills/javascript-logo.png";
 
 ---
 <Layout title="Yohan Launay">
 	<main>
-		<Nav href="#Home"></Nav>
+		<nav class="nav">
+			<ul class="ul-nav">
+				<Nav href="#home" text="Home"/>
+				<Nav href="#skills" text="Compétences"/>
+				<Nav href="#project" text="Project"/>
+				<Nav href="#contact" text="Contact"/>
+			</ul>
+		</nav>
 		<SectionHome
 			firstTitle="DÉVELOPPEUR WEB"
 			secondTitle="Yohan LAUNAY"
 			resume="Hello ! Actuellement en recherche d'une entreprise pour la poursuite de mon alternance en Concepteur développeur d’applications."
 			github="Github"
-			hrefGithub="#"
-			hrefLinkedIn="#">
+			hrefGithub="https://github.com/Yohan-Launay/"
+			hrefLinkedIn="https://www.linkedin.com/in/yohan-launay">
 		</SectionHome>
 		<TextDefilement text="DÉVELOPPEUR WEB"></TextDefilement>
 		<section id="skills-project">
 			<div class="skills-div">
 				<Skills></Skills>
 			</div>
-			<ul>
+			<ul id="project">
 				<h2>Projects</h2>
 				<div class="project">
 					<div class="card">
@@ -155,6 +157,12 @@ import javascriptLogo from "../assets/img/logo-skills/javascript-logo.png";
 					</div>
 				</ul>
 		</section>
+		<section>
+			<Contact text="🚀 N'hesitez pas à m'envoyer un mail ou un message privé sur LinkedIn pour avoir plus d'informations."/>
+		</section>
+		<section>
+			<Footer version="🧊 Portfolio 2.1" created="Created with Astro by Yohan Launay" />
+		</section>
 	</main>
 </Layout>
 
@@ -191,5 +199,24 @@ import javascriptLogo from "../assets/img/logo-skills/javascript-logo.png";
 		display: flex;
 		flex-wrap: wrap;
 	}
-
+	nav {
+		width: 450px;
+		border-radius: 10px;
+		border: 1px solid rgba(255, 255, 255, 0.66);
+		background: rgba(255, 255, 255, 0.43);
+		backdrop-filter: blur(10.600000381469727px);
+		position: fixed;
+		top: 25px;
+		left: 200px;
+		z-index: 10;
+	}
+	.ul-nav {
+		padding: 0;
+		margin: 0;
+		width: 100%;
+		height: 41px;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+	}
 </style>

@@ -1,0 +1,83 @@
+---
+
+import { Image } from 'astro:assets';
+
+import linkedInLogo from "../../assets/img/img-linkedin.png";
+import mailLogo from "../../assets/img/img-mail.png";
+
+
+
+interface Props {
+    src: string;
+    alt: string;
+    text: string;
+}
+
+const {
+    src,
+    alt,
+    text,
+} = Astro.props;
+---
+
+<div id="contact">
+    <h2>Contact</h2>
+    <p>{text}</p>
+    <div>
+        <a href="https://www.linkedin.com/in/yohan-launay">
+            <Image src={linkedInLogo} alt="LinkedIn"/>
+            <p>LinkedIn</p>
+        </a>
+        <a href="mailto:yohandeveloppe@gmail.com" target="_blank">
+            <Image src={mailLogo} alt="LinkedIn"/>
+            <p>Mail</p>
+        </a>
+    </div>
+</div>
+<style>
+    h2 {
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: normal;
+        margin: 50px 0;
+    }
+    #contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 50px 0;
+    }
+    div > div {
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+    }
+    div > p {
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        width: 60%;
+    }
+    a {
+        display: flex;
+        align-items: center;
+        border-radius: 10px;
+        background: var(--blue-pale);
+        padding: 10px 20px;
+        margin: 0 10px;
+    }
+    img {
+        height: 16px;
+        width: 16px;
+    }
+    a > p {
+        padding-left: 10px;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+</style>

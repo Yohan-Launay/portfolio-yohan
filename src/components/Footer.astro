@@ -1,0 +1,26 @@
+---
+
+interface Props {
+    version: string;
+    created: string;
+}
+
+const {
+    version,
+    created,
+} = Astro.props;
+
+---
+
+<div>
+    <p>{version}</p>
+    <p>{created}</p>
+</div>
+
+<style>
+    div {
+        display: flex;
+        justify-content: space-between;
+        margin: 20px 0;
+    }
+</style>
