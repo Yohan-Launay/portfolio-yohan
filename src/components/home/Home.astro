@@ -89,4 +89,40 @@ const {
     .link-home {
         display: flex;
     }
+
+    @media (max-width: 760px) {
+        #home {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            padding: 100px 0;
+        }
+
+        .left {
+            width: 100%;
+        }
+
+        h2 {
+            font-size: 20px;
+            padding: 0;
+            margin: 10px 0;
+        }
+        h1 {
+            font-size: 45px;
+            padding: 0;
+            margin: 0;
+        }
+        p {
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            margin: 15px 0;
+        }
+        .right img {
+            padding: 20px 0;
+            width: 100%;
+            height: 75%;
+        }
+    }
 </style>
